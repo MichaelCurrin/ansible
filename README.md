@@ -69,21 +69,26 @@ hello
 
 ### Run the playbook
 
-Using remote playbook.
+#### Remote playbook
+
+Using remote playbook. Note this stills required Python and Git to be installed.
 
 ```sh
 $ sudo ansible-pull -U https://github.com/MichaelCurrin/ansible-playbooks.git local.yml
 ```
 
-Use file in a cloned project:
+Ignore the warnings about localhost not being covered in all. The `hosts: localhost` line still works fine.
+
+#### Local playbook
+
+Use local file such as from a cloned project with overrides (might not be needed).
 
 ```sh
-$ ansible-playbook \
---connection=local \ 
---inventory 127.0.0.1, \
+$ ansible-playbook --connection=local --inventory 127.0.0.1, \
 --limit 127.0.0.1 local.yml -i ansible_hosts
 ```
 
-[source](https://www.middlewareinventory.com/blog/run-ansible-playbook-locally/)
+Note the comma in inventory is important.
 
+[source](https://www.middlewareinventory.com/blog/run-ansible-playbook-locally/)
 
