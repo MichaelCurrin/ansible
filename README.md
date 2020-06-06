@@ -48,6 +48,27 @@ Focused on Linux and macOS laptops.
 
 ## Usage
 
+### Ad hoc commands
+
+```sh
+$ ansible localhost -m ping
+localhost | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+```
+
+```sh
+$ ansible localhost -a "/bin/echo hello"
+localhost | CHANGED | rc=0 >>
+hello
+```
+
+
+### Run the playbook
+
 ```sh
 $ sudo ansible-pull local.yml -U https://github.com/MichaelCurrin/ansible-playbooks.git
 ```
+
+
