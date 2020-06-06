@@ -8,24 +8,26 @@
       update_cache: yes
       cache_valid_time: 3600
     
-  - name: Install packages
+  - name: Install / update packages
     apt: 
       name:
         - git
         - yakuake
-        - htop
         - zsh
-        
-        - python3
-        # Dev C headers for compiling such as for lxml
-        - python3-dev
    
         # Installed already on Linux Lite but included for completeness
         - curl
         - ssh
-        - scp
         - rsync
+        - htop
       state: latest  
+
+  - name: Install Python
+    - apt:
+      name:
+       - python3
+        # Dev C headers for compiling such as for lxml
+        - python3-dev
 
   - name: Install Ruby
     apt:
