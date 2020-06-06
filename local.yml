@@ -42,7 +42,7 @@
       nodejs_version: "14.x"
 
   - name: Install Ruby and Bundler
-    include_role:
+    import_role:
       name: geerlingguy.ruby
     vars:
       # This will install as the user.
