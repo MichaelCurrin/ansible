@@ -26,8 +26,8 @@
     apt:
       name:
        - python3
-        # Dev C headers for compiling such as for lxml
-        - python3-dev
+       # C headers for compiling extensions - needed for lxml
+       - python3-dev
 
   - name: Install Ruby
     apt:
