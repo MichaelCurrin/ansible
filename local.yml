@@ -78,6 +78,6 @@
       bundler --version
       zsh --version
       git --version
-      register: versions_output
-    - debug:
-        msg: "{{ versions_output.stdout }}"   
+    register: versions_output
+  - debug:
+      msg: "{{ versions_output.stdout }}"   
