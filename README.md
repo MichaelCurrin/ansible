@@ -47,7 +47,7 @@ Install from [requirements.yml](/requirements.yml) file.
 $ sudo ansible-galaxy install -r requirements.yml
 ```
 
-Install ad hoc role.
+Install role.
 
 ```sh
 $ sudo ansible-galaxy install ROLE
@@ -59,6 +59,7 @@ Check dependencies.
 $ sudo ansible-galaxy list
 ```
 
+
 ## Usage
 
 ### Play
@@ -67,9 +68,28 @@ Use Ansible to run the [local.yml](/local.yml) playbook
 
 Ansible will attempt to run `local.yml` so the playbook name does not have to be include. It will also look for a playbook based on the current machine's - e.g. `dell-lite.yml`.
 
+#### Run local playbook file
+
+Use `ansible-playbook` command.
+
+```sh
+$ sudo ansible-playbook local.yml
+```
+
+To avoid warning, you can pass inventory as one of:
+
+```
+-i ansible_hosts
+-i inventory
+```
+
+[source](https://www.middlewareinventory.com/blog/run-ansible-playbook-locally/)
+
 #### Run remote playbook file
 
-Note this still requires Python, Git and roles to be installed first.
+Use `ansible-pull` command.
+
+Note this still requires Python, git and roles to be installed first. Also, the color output is not supported like with the local install.
 
 ```sh
 $ sudo ansible-pull -U https://github.com/MichaelCurrin/ansible-playbooks.git
@@ -79,21 +99,6 @@ Ignore the warnings about localhost not being covered in all. The `hosts: localh
 
 Add `-v` or up to `-vvvv` for more verbosity.
 
-#### Run local playbook file
-
-Use local file.
-
-```sh
-$ ansible-playbook local.yml
-```
-
-Some possible arguments - note the comma in inventory is important.
-
-```
---connection=local --inventory 127.0.0.1, --limit 127.0.0.1 -i ansible_hosts
-```
-
-[source](https://www.middlewareinventory.com/blog/run-ansible-playbook-locally/)
 
 ### Ad hoc commands
 
