@@ -35,7 +35,8 @@ Focused on Linux and macOS laptops.
 ## Requirements
 
 - [Ansible](https://ansible.com)
-- [Git](https://git-scm.com/)
+- [Python 3](python.org/) - this is a dependency of Ansible which is automatically installed.
+- [Git](https://git-scm.com/) - needed to run remote playbooks.
 
 
 ## Installation
