@@ -19,6 +19,7 @@ Focused on Linux and macOS laptops.
 ### Usage tutorials
 
 - https://opensource.com/article/18/3/manage-workstation-ansible
+    - https://gitlab.com/jsherman82/ansible_article
 - https://opensource.com/article/18/3/manage-your-workstation-configuration-ansible-part-2
 
 ### Template repos
