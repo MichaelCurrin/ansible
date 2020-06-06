@@ -1,6 +1,24 @@
 ---
 - hosts: localhost
   become: true
+  
   tasks:
+  - name: Run apt update if not run in last hour.
+    apt:
+      update_cache: yes
+      cache_valid_time: 3600
+    
   - name: Install packages
-    apt: name=yakuake
+    apt: 
+      name:
+        - git
+        - yakuake
+        - htop
+        - zsh
+      state: latest  
+      
+  - name: Install Python # Things may break if this is updated.
+    apt: 
+      name:      
+        - python3
+      state: present
