@@ -20,25 +20,22 @@ Focused on Linux and macOS laptops.
     $ sudo apt install -y ansible git
     ```
 
+### Install project dependencies
+
+Note `sudo` is needed otherwise the playbook can't find the roles.
+
+```sh
+$ sudo ansible-galaxy install geerlingguy.nodejs
+```
+
+Or install from locally cloned and repo and [requirements.yml](/requirements.yml).
+
+```sh
+$ sudo ansible-galaxy install -r requirements.yml
+```
+
 
 ## Usage
-
-### Ad hoc commands
-
-```sh
-$ ansible localhost -m ping
-localhost | SUCCESS => {
-    "changed": false,
-    "ping": "pong"
-}
-```
-
-```sh
-$ ansible localhost -a "/bin/echo hello"
-localhost | CHANGED | rc=0 >>
-hello
-```
-
 
 ### Run the playbook
 
@@ -67,3 +64,18 @@ Note the comma in inventory is important.
 
 [source](https://www.middlewareinventory.com/blog/run-ansible-playbook-locally/)
 
+### Ad hoc commands
+
+```sh
+$ ansible localhost -m ping
+localhost | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+```
+
+```sh
+$ ansible localhost -a "/bin/echo hello"
+localhost | CHANGED | rc=0 >>
+hello
+```
