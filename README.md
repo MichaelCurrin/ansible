@@ -27,20 +27,42 @@ $ sudo apt install -y ansible git
 $ brew install ansible git
 ```
 
-### Install project dependencies
+### Clone
 
-Note `sudo` is needed otherwise the playbook can't find the roles.
+Clone from the public HTTPS URL.
 
 ```sh
-$ sudo ansible-galaxy install geerlingguy.nodejs
+$ git clone https://github.com/MichaelCurrin/ansible-playbooks.git
+$ cd ansible-playbooks
 ```
 
-Or install from locally cloned and repo and [requirements.yml](/requirements.yml).
+If you don't want to clone the repo, just download the requirements file separately. There doesn't seem to be a good alternative to this
+
+```sh
+$ cd /tmp
+$ curl -O https://raw.githubusercontent.com/MichaelCurrin/ansible-playbooks/master/requirements.yml
+```
+
+### Install project dependencies
+> Note `sudo` is needed otherwise the playbook can't find the roles.
+
+Install from [requirements.yml](/requirements.yml) file.
 
 ```sh
 $ sudo ansible-galaxy install -r requirements.yml
 ```
 
+Install ad hoc role.
+
+```sh
+$ sudo ansible-galaxy install ROLE
+```
+
+Check dependencies.
+
+```sh
+$ sudo ansible-galaxy list
+```
 
 ## Usage
 
@@ -52,7 +74,7 @@ Ansible will attempt to run `local.yml` so the playbook name does not have to be
 
 #### Run remote playbook file
 
-Note this stills required Python and Git to be installed.
+Note this still requires Python, Git and roles to be installed first.
 
 ```sh
 $ sudo ansible-pull -U https://github.com/MichaelCurrin/ansible-playbooks.git
@@ -64,14 +86,17 @@ Add `-v` or up to `-vvvv` for more verbosity.
 
 #### Run local playbook file
 
-Use local file such as from a cloned project with overrides (might not be needed).
+Use local file.
 
 ```sh
-$ ansible-playbook --connection=local --inventory 127.0.0.1, \
---limit 127.0.0.1 playbook.yml -i ansible_hosts
+$ ansible-playbook local.yml
 ```
 
-Note the comma in inventory is important.
+Some possible arguments - note the comma in inventory is important.
+
+```
+--connection=local --inventory 127.0.0.1, --limit 127.0.0.1 -i ansible_hosts
+```
 
 [source](https://www.middlewareinventory.com/blog/run-ansible-playbook-locally/)
 
