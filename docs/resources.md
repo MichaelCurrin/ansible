@@ -6,7 +6,7 @@
 - https://ansible.com
 - https://docs.ansible.com
     - [Getting Started](https://docs.ansible.com/ansible/latest/user_guide/intro_getting_started.html)
-
+- https://galaxy.ansible.com
 
 ## Installation
 
@@ -60,8 +60,9 @@
     - [defaults/main.yml](https://github.com/geerlingguy/ansible-role-nodejs/blob/master/defaults/main.yml)
 - [Ansible Node.js Role](https://github.com/nodesource/ansible-nodejs-role) by `nodesource`
 
+Note that `import_role` does a check at the start of the run so is safer than `include_role`.
 
-## Project structure
+### Project structure
 
 [source](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html#id5)
 
