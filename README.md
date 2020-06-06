@@ -4,34 +4,6 @@
 Focused on Linux and macOS laptops.
 
 
-## Resources
-
-## Ansible
-
-- https://ansible.com
-- https://docs.ansible.com
-    - [Getting Started](https://docs.ansible.com/ansible/latest/user_guide/intro_getting_started.html)
-
-### Installation
-
-- https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html	
-- https://linuxhandbook.com/install-ansible-linux/
-
-### Configuration tutorials
-
-- https://opensource.com/article/18/3/manage-workstation-ansible
-    - https://gitlab.com/jsherman82/ansible_article
-- https://opensource.com/article/18/3/manage-your-workstation-configuration-ansible-part-2
-- [Managing apt packages](https://docs.ansible.com/ansible/latest/modules/apt_module.html)
-- [Add and remove apt repos](https://docs.ansible.com/ansible/latest/modules/apt_repository_module.html)
-
-### Template repos
-
-- https://github.com/pbulteel/ansible-laptop
-- https://github.com/acch/ansible-boilerplate
-- https://github.com/dmahler/ansible-template
-
-
 ## Requirements
 
 - [Ansible](https://ansible.com)
