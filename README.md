@@ -6,6 +6,11 @@ Focused on Linux and macOS laptops.
 
 ## Resources
 
+## Ansible
+
+- https://ansible.com
+- https://docs.ansible.com
+
 ### Installation
 
 - https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html	
@@ -23,13 +28,19 @@ Focused on Linux and macOS laptops.
 - https://github.com/dmahler/ansible-template
 
 
+## Requirements
+
+- [Ansible](https://ansible.com)
+- [Git](https://git-scm.com/)
+
+
 ## Installation
 
 ### Install system dependencies
 
 - Debian/Ubuntu
     ```sh
-    $ sudo apt install ansible
+    $ sudo apt install -y ansible git
     ```
 
 
