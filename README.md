@@ -46,6 +46,8 @@ $ sudo ansible-galaxy install -r requirements.yml
 
 ### Run the playbook
 
+Use Ansible to run [playbook.yml](/playbook.yml).
+
 #### Remote playbook
 
 Using remote playbook. Note this stills required Python and Git to be installed.
