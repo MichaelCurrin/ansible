@@ -69,6 +69,21 @@ hello
 
 ### Run the playbook
 
+Using remote playbook.
+
 ```sh
 $ sudo ansible-pull -U https://github.com/MichaelCurrin/ansible-playbooks.git local.yml
 ```
+
+Use file in a cloned project:
+
+```sh
+$ ansible-playbook \
+--connection=local \ 
+--inventory 127.0.0.1, \
+--limit 127.0.0.1 local.yml -i ansible_hosts
+```
+
+[source](https://www.middlewareinventory.com/blog/run-ansible-playbook-locally/)
+
+
