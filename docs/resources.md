@@ -54,6 +54,8 @@
 
 ## Roles
 
+- [Playbooks reuse roles](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html) in the docs
 - [Ansible Role Ruby](https://github.com/geerlingguy/ansible-role-ruby) by `geerlingguy`
 - [Ansible Role Node.js](https://github.com/geerlingguy/ansible-role-nodejs) by `geerlingguy`
 - [Ansible Node.js Role](https://github.com/nodesource/ansible-nodejs-role) by `nodesource`
+
