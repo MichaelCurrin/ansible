@@ -34,7 +34,7 @@
        # C headers for compiling extensions - needed for lxml
        - python3-dev
 
-  - include_roles:
+  - include_role:
       name:
         - geerlingguy.nodejs
       vars:
