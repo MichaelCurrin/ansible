@@ -51,8 +51,9 @@
 - https://github.com/acch/ansible-boilerplate
 - https://github.com/dmahler/ansible-template
 
+
 ## Roles
 
-- [Ansible Role Ruby](https://github.com/geerlingguy/ansible-role-ruby)
-- [Ansible Role Node.js](https://github.com/geerlingguy/ansible-role-nodejs)
-
+- [Ansible Role Ruby](https://github.com/geerlingguy/ansible-role-ruby) by `geerlingguy`
+- [Ansible Role Node.js](https://github.com/geerlingguy/ansible-role-nodejs) by `geerlingguy`
+- [Ansible Node.js Role](https://github.com/nodesource/ansible-nodejs-role) by `nodesource`
