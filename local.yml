@@ -8,8 +8,8 @@
       update_cache: yes
       cache_valid_time: 3600
  
-  - debug: ''
-    msg: Starting installs / updates
+  - debug:
+      msg: Starting installs / updates
     
   - name: Install / update packages
     apt: 
@@ -59,7 +59,7 @@
       upgrade: dist
   
   - debug:
-    msg: Starting clean up steps
+      msg: Starting clean-up steps
   
   - name: Remove useless packages from the cache
     apt:
