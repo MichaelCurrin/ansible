@@ -67,3 +67,12 @@
   - name: Remove dependencies that are no longer required
     apt:
       autoremove: yes
+
+  - name: Check versions
+    shell: |
+      python3 -V
+      node -v
+      npm -v
+      ruby --version
+      
+      
