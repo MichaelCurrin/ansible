@@ -3,4 +3,4 @@
   become: true
   tasks:
   - name: Install packages
-    apt: name=htop
+    apt: name=yakuake
