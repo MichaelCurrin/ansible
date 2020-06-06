@@ -7,6 +7,9 @@
     apt:
       update_cache: yes
       cache_valid_time: 3600
+ 
+  - debug:
+    msg: Starting installs / updates
     
   - name: Install / update packages
     apt: 
@@ -14,12 +17,14 @@
         - git
         - yakuake
         - zsh
+        - vim
    
         # Installed already on Linux Lite but included for completeness
         - curl
         - ssh
         - rsync
         - htop
+        - nano
       state: latest  
 
   - name: Install Python
@@ -28,6 +33,12 @@
        - python3
        # C headers for compiling extensions - needed for lxml
        - python3-dev
+
+  - name: Install Node.js
+    vars_files:
+      - vars/main.yml
+    include_roles:
+      - geerlingguy.nodejs
 
   - name: Install Ruby
     apt:
@@ -41,10 +52,15 @@
       name: bundler
       user_install: yes
 
+  # This may be dangerous for Python envs
   - name: Update all packages to the latest version (not just the ones named in playbook)
     apt:
+      # Uses apt-get not aptitude
       upgrade: dist
-
+  
+  - debug:
+    msg: Starting clean up steps
+  
   - name: Remove useless packages from the cache
     apt:
       autoclean: yes
