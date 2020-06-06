@@ -68,7 +68,5 @@ hello
 ### Run the playbook
 
 ```sh
-$ sudo ansible-pull local.yml -U https://github.com/MichaelCurrin/ansible-playbooks.git
+$ sudo ansible-pull -U https://github.com/MichaelCurrin/ansible-playbooks.git local.yml
 ```
-
-
