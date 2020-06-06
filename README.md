@@ -17,11 +17,13 @@ Focused on Linux and macOS laptops.
 - https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html	
 - https://linuxhandbook.com/install-ansible-linux/
 
-### Usage tutorials
+### Configuration tutorials
 
 - https://opensource.com/article/18/3/manage-workstation-ansible
     - https://gitlab.com/jsherman82/ansible_article
 - https://opensource.com/article/18/3/manage-your-workstation-configuration-ansible-part-2
+- [Managing apt packages](https://docs.ansible.com/ansible/latest/modules/apt_module.html)
+- [Add and remove apt repos](https://docs.ansible.com/ansible/latest/modules/apt_repository_module.html)
 
 ### Template repos
 
