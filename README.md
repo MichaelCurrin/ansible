@@ -1,5 +1,7 @@
 # Ansible Playbooks
-> Manage packages and configurations on machines using Ansible
+> Manage packages and configurations on my machines using Ansible
+
+Focused on Linux and macOS laptops.
 
 
 ## Resources
