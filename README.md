@@ -44,23 +44,25 @@ $ sudo ansible-galaxy install -r requirements.yml
 
 ## Usage
 
-### Run the playbook
+### Play
 
-Use Ansible to run [playbook.yml](/playbook.yml).
+Use Ansible to run the [local.yml](/local.yml) playbook
 
-#### Remote playbook
+Ansible will attempt to run `local.yml` so the playbook name does not have to be include. It will also look for a playbook based on the current machine's - e.g. `dell-lite.yml`.
 
-Using remote playbook. Note this stills required Python and Git to be installed.
+#### Run remote playbook file
+
+Note this stills required Python and Git to be installed.
 
 ```sh
-$ sudo ansible-pull -U https://github.com/MichaelCurrin/ansible-playbooks.git playbook.yml
+$ sudo ansible-pull -U https://github.com/MichaelCurrin/ansible-playbooks.git
 ```
 
 Ignore the warnings about localhost not being covered in all. The `hosts: localhost` line still works fine.
 
 Add `-v` or up to `-vvvv` for more verbosity.
 
-#### Local playbook
+#### Run local playbook file
 
 Use local file such as from a cloned project with overrides (might not be needed).
 
