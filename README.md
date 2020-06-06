@@ -15,10 +15,17 @@ Focused on Linux and macOS laptops.
 
 ### Install system dependencies
 
-- Debian/Ubuntu
-    ```sh
-    $ sudo apt install -y ansible git
-    ```
+### Debian/Ubuntu
+
+```sh
+$ sudo apt install -y ansible git
+```
+
+### macOS
+
+```sh
+$ brew install ansible git
+```
 
 ### Install project dependencies
 
