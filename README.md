@@ -10,6 +10,7 @@ Focused on Linux and macOS laptops.
 
 - https://ansible.com
 - https://docs.ansible.com
+    - [Getting Started](https://docs.ansible.com/ansible/latest/user_guide/intro_getting_started.html)
 
 ### Installation
 
