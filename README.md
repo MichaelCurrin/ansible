@@ -51,7 +51,7 @@ $ sudo ansible-galaxy install -r requirements.yml
 Using remote playbook. Note this stills required Python and Git to be installed.
 
 ```sh
-$ sudo ansible-pull -U https://github.com/MichaelCurrin/ansible-playbooks.git local.yml
+$ sudo ansible-pull -U https://github.com/MichaelCurrin/ansible-playbooks.git playbook.yml
 ```
 
 Ignore the warnings about localhost not being covered in all. The `hosts: localhost` line still works fine.
@@ -64,7 +64,7 @@ Use local file such as from a cloned project with overrides (might not be needed
 
 ```sh
 $ ansible-playbook --connection=local --inventory 127.0.0.1, \
---limit 127.0.0.1 local.yml -i ansible_hosts
+--limit 127.0.0.1 playbook.yml -i ansible_hosts
 ```
 
 Note the comma in inventory is important.
