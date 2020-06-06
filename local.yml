@@ -42,12 +42,12 @@
       nodejs_version: "14.x"
 
   - name: Install Ruby and Bundler
-      include_role:
-        name: geerlingguy.ruby
-      vars:
-        # This will install as the user.
-        ruby_install_gems: []
-        
+    include_role:
+      name: geerlingguy.ruby
+    vars:
+      # This will install as the user.
+      ruby_install_gems: []
+
   # This may be dangerous for Python envs
   - name: Update all packages to the latest version (not just the ones named in playbook)
     apt:
