@@ -72,10 +72,10 @@
   - name: Show versions for important packages
     shell: |
       python3 -V
-      Node - $(node -v)
-      NPM - $(npm -v)
+      echo "Node - $(node -v)"
+      echo "NPM - $(npm -v)"
       ruby --version
-      bundler - $(bundler --version)
+      echo "bundler - $(bundler --version)"
       zsh --version
       git --version
     register: versions_output
