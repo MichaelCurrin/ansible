@@ -23,7 +23,7 @@
       state: latest  
 
   - name: Install Python
-    - apt:
+    apt:
       name:
        - python3
         # Dev C headers for compiling such as for lxml
