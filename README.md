@@ -80,6 +80,8 @@ $ sudo ansible-pull -U https://github.com/MichaelCurrin/ansible-playbooks.git lo
 
 Ignore the warnings about localhost not being covered in all. The `hosts: localhost` line still works fine.
 
+Add `-v` or up to `-vvvv` for more verbosity.
+
 #### Local playbook
 
 Use local file such as from a cloned project with overrides (might not be needed).
