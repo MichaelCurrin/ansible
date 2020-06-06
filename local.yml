@@ -4,4 +4,3 @@
   tasks:
   - name: Install htop
     apt: name=htop
-  
