@@ -48,5 +48,5 @@ Focused on Linux and macOS laptops.
 ## Usage
 
 ```sh
-$ sudo ansible-pull -U https://github.com/MichaelCurrin/ansible-playbooks.git
+$ sudo ansible-pull local.yml -U https://github.com/MichaelCurrin/ansible-playbooks.git
 ```
