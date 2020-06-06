@@ -3,7 +3,7 @@
   become: true
   
   tasks:
-  - name: Run apt update if not run in last hour.
+  - name: Run apt update if not run in last hour
     apt:
       update_cache: yes
       cache_valid_time: 3600
@@ -15,10 +15,38 @@
         - yakuake
         - htop
         - zsh
-      state: latest  
-      
-  - name: Install Python # Things may break if this is updated.
-    apt: 
-      name:      
+        
         - python3
-      state: present
+        # Dev C headers for compiling such as for lxml
+        - python3-dev
+   
+        # Installed already on Linux Lite but included for completeness
+        - curl
+        - ssh
+        - scp
+        - rsync
+      state: latest  
+
+  - name: Install Ruby
+    apt:
+      name:
+        - ruby
+        - ruby-dev
+        - make
+  
+  - name: Install gems with proper $PATH
+    gem:
+      name: bundler
+      user_install: yes
+
+  - name: Update all packages to the latest version (not just the ones named in playbook)
+    apt:
+      upgrade: dist
+
+  - name: Remove useless packages from the cache
+    apt:
+      autoclean: yes
+
+  - name: Remove dependencies that are no longer required
+    apt:
+      autoremove: yes
