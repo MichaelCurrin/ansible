@@ -35,23 +35,16 @@
        # C headers for compiling extensions - needed for lxml
        - python3-dev
 
-  - include_role:
+  - name: Install Node.js
+    include_role:
       name: geerlingguy.nodejs
     vars:
       nodejs_version: "14.x"
 
-  - name: Install Ruby
-    apt:
-      name:
-        - ruby
-        - ruby-dev
-        - make
-  
-  - name: Install gems with proper $PATH
-    gem:
-      name: bundler
-      user_install: yes
-
+- name: Install Ruby and Bundler
+    include_role:
+      name: geerlingguy.nodejs
+      
   # This may be dangerous for Python envs
   - name: Update all packages to the latest version (not just the ones named in playbook)
     apt:
