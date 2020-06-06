@@ -34,11 +34,11 @@
        # C headers for compiling extensions - needed for lxml
        - python3-dev
 
-  - name: Install Node.js
-    vars_files:
-      - vars/main.yml
-    include_roles:
-      - geerlingguy.nodejs
+  - include_roles:
+      name:
+        - geerlingguy.nodejs
+      vars:
+        nodejs_version: "14.x"
 
   - name: Install Ruby
     apt:
