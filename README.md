@@ -36,15 +36,10 @@ $ git clone https://github.com/MichaelCurrin/ansible-playbooks.git
 $ cd ansible-playbooks
 ```
 
-If you don't want to clone the repo, just download the requirements file separately. There doesn't seem to be a good alternative to this
-
-```sh
-$ cd /tmp
-$ curl -O https://raw.githubusercontent.com/MichaelCurrin/ansible-playbooks/master/requirements.yml
-```
+_Note that while it's possible to install from a URL without cloning first, that command actually needs git to do a clone. Either way the requirements file will be needed. So it's best to do just clone anyway._
 
 ### Install project dependencies
-> Note `sudo` is needed otherwise the playbook can't find the roles.
+_Note `sudo` is needed otherwise the playbook can't find the roles._
 
 Install from [requirements.yml](/requirements.yml) file.
 
