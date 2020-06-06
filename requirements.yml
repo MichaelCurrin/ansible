@@ -1,5 +1,2 @@
----
-dependencies:
-  - geerlingguy.nodejs
-  - geerlingguy.ruby
-  
+geerlingguy.nodejs
+geerlingguy.ruby
