@@ -1,7 +1,22 @@
 # Ansible Playbooks
 > Manage packages and configurations on my machines using Ansible
 
-Focused on Linux and macOS laptops.
+Focused on Linux laptops.
+
+
+## Notes
+
+I did this project as an experiment to improve my configuration of my laptops in order to save time and effort and to learn about Ansible. I am going with a traditional approach and am discontinuing for the following reasons:
+
+- Having a script to add `apt` install/upgrade commands is easy to setup (download and run with bash) and so has fewer dependencies and no Ansible Roles needed.
+- The traditional approach is more transparent to debug - I keep a record of what I installed and there are plenty of resources out there. When going into the Ansible way of doing it, there will be fewer resources and its hard to imagine what it will do and to risk running it. For example, there are two Node.js roles that I found and there are intended to work for many operating systems.
+- Some things like setting up deb repo for Node.js or VS Code have to be done just once and afterwards you can update with apt or the application's updater.
+- It's not simple to run an arbitrary command from the playbook - it becomes abstracted but harder to use just a piece.
+- The setup only works so far for apt on Linux. Setup on macOS is possible but it must probably not be with sudo and I would worry about unintended automated actions on macOS for work. Also I'll have to write instructions for both Linux and macOS so there's no Ansible gain here.
+- I don't need to run an initial setup that often. My choice of operating system and number of machines is limited and easy to manage by hand and through local use - I don't need orchestration of many machines that are remote or have services on.
+- I don't want to be tied to Ansible in the long run.
+- If I want to try something out without Ansible and then keep it, I have to learn both ways of doing it anyway which is extra work.
+- Changes to config files such as PATH and hosts are better done with more control
 
 
 ## Requirements
@@ -64,9 +79,9 @@ $ sudo ansible-galaxy list
 
 ### Play
 
-Use Ansible to run the [local.yml](/local.yml) playbook
+Use Ansible to run the [local.yml](/local.yml) playbook.
 
-Ansible will attempt to run `local.yml` so the playbook name does not have to be include. It will also look for a playbook based on the current machine's - e.g. `dell-lite.yml`.
+Ansible will attempt to run `local.yml` so the playbook name does not have to be include. It will also look for a playbook based on the current machine's configured hostname.
 
 #### Run local playbook file
 
@@ -98,6 +113,17 @@ $ sudo ansible-pull -U https://github.com/MichaelCurrin/ansible-playbooks.git
 Ignore the warnings about localhost not being covered in all. The `hosts: localhost` line still works fine.
 
 Add `-v` or up to `-vvvv` for more verbosity.
+
+
+### Checks
+
+```sh
+$ ansible-playbook local.yml --checks
+```
+
+```sh
+$ ansible-lint local.yml
+```
 
 
 ### Ad hoc commands
