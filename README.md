@@ -21,6 +21,7 @@ I did this Ansible roject as an experiment to improve my configuration of my lap
 - I don't want to be tied to Ansible in the long run.
 - If I want to try something out without Ansible and then keep it, I have to learn both ways of doing it anyway which is extra work.
 - Changes to config files such as PATH and hosts are better done with more control
+- Ansible is too heavy of features for my usecase. It can handle managing multiple operating systems, managing a group of machines and checking if a web server or database are online. I didn't needed the features.
 
 
 ## Requirements
