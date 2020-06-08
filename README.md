@@ -4,9 +4,11 @@
 Focused on Linux laptops.
 
 
-## Notes
+## Notice
 
-I did this project as an experiment to improve my configuration of my laptops in order to save time and effort and to learn about Ansible. I am going with a traditional approach and am discontinuing for the following reasons:
+This is project works but is **not maintained**. I went with a plain Bash scripting approach - [os-genesis](https://github.com/MichaelCurrin/os-genesis). 
+
+I did this Ansible roject as an experiment to improve my configuration of my laptops in order to save time and effort and to learn about Ansible. I am going with a traditional approach and am discontinuing for the following reasons:
 
 - Having a script to add `apt` install/upgrade commands is easy to setup (download and run with bash) and so has fewer dependencies and no Ansible Roles needed.
 - The traditional approach is more transparent to debug - I keep a record of what I installed and there are plenty of resources out there. When going into the Ansible way of doing it, there will be fewer resources and its hard to imagine what it will do and to risk running it. For example, there are two Node.js roles that I found and there are intended to work for many operating systems.
