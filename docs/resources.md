@@ -8,10 +8,19 @@
     - [Getting Started](https://docs.ansible.com/ansible/latest/user_guide/intro_getting_started.html)
 - https://galaxy.ansible.com
 
+
 ## Installation
 
 - https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html	
 - https://linuxhandbook.com/install-ansible-linux/
+
+The requirements file can be more detailed like this:
+
+```yaml
+- src: git@github.com:foo/bar.git
+  scm: git
+  version: "v0.0.1"
+```
 
 
 ## Configuration tutorials
