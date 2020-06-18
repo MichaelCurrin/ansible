@@ -27,7 +27,7 @@ I did this Ansible roject as an experiment to improve my configuration of my lap
 ## Requirements
 
 - [Ansible](https://ansible.com)
-- [Python 3](python.org/) - this is a dependency of Ansible which is automatically installed.
+- [Python 3](https://python.org/) - this is a dependency of Ansible which is automatically installed.
 - [Git](https://git-scm.com/) - needed to run remote playbooks.
 
 
