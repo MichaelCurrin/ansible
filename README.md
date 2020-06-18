@@ -6,7 +6,7 @@ Focused on managing a Linux laptop.
 
 ## Notice
 
-This is project works but is **not maintained**. I went with a plain Bash scripting approach - [os-genesis](https://github.com/MichaelCurrin/os-genesis). 
+This is project works but is **not maintained** See reasons below. Ansible was to heavy understand and debug for what I need to do on one machine - so I went with a plain Bash scripting approach instead - [os-genesis](https://github.com/MichaelCurrin/os-genesis).
 
 Ansible is nice and the docs are good. So it was easy enough to get going - the Roles and the YAML syntax was the hardest part. It's just overkill for managing a single laptop. It abstracts way logic especially if you use Roles (extensions), making it harder to debug and reverse any changes.
 
