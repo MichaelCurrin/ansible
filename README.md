@@ -67,13 +67,13 @@ Install from [requirements.yml](/requirements.yml) file.
 $ sudo ansible-galaxy install -r requirements.yml
 ```
 
-Install role.
+Install ad hoc role.
 
 ```sh
 $ sudo ansible-galaxy install ROLE
 ```
 
-Check dependencies.
+Check installed dependencies.
 
 ```sh
 $ sudo ansible-galaxy list
@@ -146,3 +146,8 @@ $ ansible localhost -a "/bin/echo hello"
 localhost | CHANGED | rc=0 >>
 hello
 ```
+
+
+## License
+
+Released under [MIT](/LICENSE).
