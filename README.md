@@ -1,7 +1,7 @@
 # Ansible Playbooks
 > Manage packages and configurations on my machines using Ansible
 
-Focused on managing a Linux laptop.
+This guide is focused on managing a Linux laptop and includes setup and run steps. This was my first time using Ansible and these instructions are aimed at other beginners or myself when I need a reference.
 
 
 ## Requirements
