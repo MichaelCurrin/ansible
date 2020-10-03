@@ -6,14 +6,16 @@ Focused on managing a Linux laptop.
 
 ## Notice
 
-This is project works but is **not maintained** See reasons below. Ansible was to heavy understand and debug for what I need to do on one machine - so I went with a plain Bash scripting approach instead - [os-genesis](https://github.com/MichaelCurrin/os-genesis).
+This is project works but is **not maintained**. See reasons below. 
 
-Ansible is nice and the docs are good. So it was easy enough to get going - the Roles and the YAML syntax was the hardest part. It's just overkill for managing a single laptop. It abstracts way logic especially if you use Roles (extensions), making it harder to debug and reverse any changes.
+Ansible was to heavy understand and debug for what I need to do on **one** machine - so I went with a plain Bash scripting approach instead - [os-genesis](https://github.com/MichaelCurrin/os-genesis).
 
-I did this Ansible roject as an experiment to improve my configuration of my laptops in order to save time and effort and to learn about Ansible. I am going with a traditional approach and am discontinuing for the following reasons:
+Ansible is modern and the docs are good. So it was easy enough to get going - the Roles and the YAML syntax was the hardest part. It's just overkill for managing a single laptop. It abstracts way logic especially if you use Roles (extensions), making it harder to debug and reverse any changes.
+
+I did this Ansible project as an experiment to improve my configuration of my laptops in order to save time and effort and to learn about Ansible. I am going with a traditional approach and am discontinuing for the following reasons:
 
 - Having a script to add `apt` install/upgrade commands is easy to setup (download and run with bash) and so has fewer dependencies and no Ansible Roles needed.
-- The traditional approach is more transparent to debug - I keep a record of what I installed and there are plenty of resources out there. When going into the Ansible way of doing it, there will be fewer resources and its hard to imagine what it will do and to risk running it. For example, there are two Node.js roles that I found and there are intended to work for many operating systems.
+- The traditional approach is more transparent to debug - I keep a record of what I installed and there are plenty of resources out there. When going into the Ansible way of doing it, there will be fewer resources and its hard to imagine what it will do and to risk running it. For example, there are two Node.js roles that I found and they are intended to work for many operating systems. And they might be targeted at a root user or a remote server setup rather than a home laptop setup. There is a ton of code in a role and it was hard to see what is actually does.
 - Some things like setting up deb repo for Node.js or VS Code have to be done just once and afterwards you can update with apt or the application's updater.
 - It's not simple to run an arbitrary command from the playbook - it becomes abstracted but harder to use just a piece.
 - The setup only works so far for apt on Linux. Setup on macOS is possible but it must probably not be with sudo and I would worry about unintended automated actions on macOS for work. Also I'll have to write instructions for both Linux and macOS so there's no Ansible gain here.
