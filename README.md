@@ -7,6 +7,7 @@ This guide is focused on managing a Linux laptop and includes setup and run step
 ## Resources 
 
 - [Ansible](https://michaelcurrin.github.io/code-cookbook/recipes/ansible/) in Code Codebook.
+- [User guide](https://docs.ansible.com/ansible/latest/user_guide/index.html) in the docs.
 
 
 ## Requirements
