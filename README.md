@@ -4,6 +4,11 @@
 This guide is focused on managing a Linux laptop and includes setup and run steps. This was my first time using Ansible and these instructions are aimed at other beginners or myself when I need a reference.
 
 
+## Resources 
+
+- [Ansible](https://michaelcurrin.github.io/code-cookbook/recipes/ansible/) in Code Codebook.
+
+
 ## Requirements
 
 - [Ansible](https://ansible.com)
